@@ -18,8 +18,6 @@ const Register = () => {
                 console.log(error.message);
             })
 
-        // password validation
-
 
     }
     return (
