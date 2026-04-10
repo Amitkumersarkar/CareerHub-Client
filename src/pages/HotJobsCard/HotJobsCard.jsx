@@ -21,10 +21,15 @@ const HotJobsCard = ({ job }) => {
                     {title}
                     <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+                <p className="">{description}</p>
+                <div className="flex gap-3 flex-wrap">
+                    {requirements.map(skill => <p className="text-center border hover:bg-fuchsia-700 rounded-md">{skill}</p>)}
+                </div>
+                <div>
+                    <p className="">Salary : {salaryRange.min}-{salaryRange.max} BDT</p>
+                </div>
+                <div className="flex justify-center mt-3">
+                    <button className="btn btn-secondary ">Apply Now</button>
                 </div>
             </div>
         </div>
