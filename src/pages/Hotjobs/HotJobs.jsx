@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import HotJobsCard from "../HotJobsCard/HotJobsCard";
 
 const HotJobs = () => {
-    const [jobs, setJobs] = useState();
+    const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:4000/jobs')
@@ -12,7 +12,7 @@ const HotJobs = () => {
 
     return (
         <div>
-            <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {
                     jobs.map(job => <HotJobsCard key={job._id} job={job}></HotJobsCard>)
                 }
