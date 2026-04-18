@@ -41,7 +41,6 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {/* conditional rendering */}
                 {
                     user ? <> <button onClick={handleSignOut} className="btn">Sign Out</button> </> : <>
                         <NavLink to='/register' className='btn'>Register</NavLink>
